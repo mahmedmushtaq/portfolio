@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Gilroy";
+    src: url("../assets/fonts/Gilroy-extraBold.woff2") format("woff2"),
+      url("../assets/fonts/Gilroy-Light.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "gilroy-bold";
+    src: url("../assets/fonts/Gilroy-extraBold.woff2") format("woff2"),
+      url("../assets/fonts/Gilroy-ExtraBold.woff") format("woff");
+  }
+  @font-face {
+    font-family: "montserrat-regular";
+    src: url("../assets/fonts/Montserrat-Regular.woff2") format("woff2"),
+      url("../assets/fonts/Montserrat-Regular.woff") format("woff");
+  }
+}
