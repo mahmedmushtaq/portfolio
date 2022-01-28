@@ -5,38 +5,38 @@ export const topBarIconsList = [
     id: 1,
     component: Home,
     heading: "Home",
-    link: "",
+    link: "#home",
   },
 
   {
     id: 2,
     component: Info,
     heading: "Info",
-    link: "",
+    link: "#info",
   },
 
   {
     id: 3,
     component: Briefcase,
     heading: "Skills",
-    link: "",
+    link: "#skills",
   },
-  {
-    id: 4,
-    component: Coffee,
-    heading: "Services",
-    link: "",
-  },
+  // {
+  //   id: 4,
+  //   component: Coffee,
+  //   heading: "Services",
+  //   link: "#services",
+  // },
   {
     id: 5,
     component: Image,
     heading: "Portfolio",
-    link: "",
+    link: "#portfolio",
   },
   {
     id: 6,
     component: Send,
     heading: "Contact Me",
-    link: "",
+    link: "#contactme",
   },
 ];

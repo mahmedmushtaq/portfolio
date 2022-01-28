@@ -11,12 +11,16 @@ const Testimonials = () => {
       heading="Testimonials"
       secondaryHeading="My Clients saying"
       contentTopMargin={12}
+      className="mt-28"
+      id="testimonials"
     >
-      <Carousel>
+      {/* <Carousel> */}
+      <div className="grid grid-cols-2">
         {testimonialsReview.map((item) => (
           <TestimonialItem key={item.id} {...item} />
         ))}
-      </Carousel>
+      </div>
+      {/* </Carousel> */}
     </BasicLayout>
   );
 };

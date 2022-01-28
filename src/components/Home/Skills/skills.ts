@@ -13,6 +13,8 @@ const mySkillsList = [
       { id: 4, heading: "Next", percentage: 98 },
       { id: 5, heading: "Web3", percentage: 80 },
       { id: 6, heading: "AWS lambda, amplify, dynamoDB", percentage: 85 },
+      { id: 7, heading: "WordPress", percentage: 100 },
+      { id: 8, heading: "Shopify", percentage: 100 },
     ],
   },
   {

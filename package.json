@@ -16,6 +16,7 @@
     "react-responsive-carousel": "^3.2.22",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
+    "react-scroll-into-view": "^1.11.0",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },

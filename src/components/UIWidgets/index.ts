@@ -9,3 +9,4 @@ export { default as Stepper } from "./Stepper";
 export { default as HighLightStepper } from "./Stepper/HighlightStepper";
 export { default as Drawer } from "./Drawer";
 export { default as Container } from "./Container";
+export { default as Card } from "./Card";

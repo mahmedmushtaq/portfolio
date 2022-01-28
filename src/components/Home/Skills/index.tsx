@@ -11,6 +11,7 @@ const Skills = () => {
       heading="Skills"
       secondaryHeading="My Technical Level"
       contentTopMargin={12}
+      id="skills"
     >
       <div className="">
         {mySkillsList.map((list) => (

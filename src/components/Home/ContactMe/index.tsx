@@ -3,7 +3,7 @@ import { Button } from "../../UIWidgets";
 
 const ContactMe = () => {
   return (
-    <div className="bg-lprimary text-lbg">
+    <div id="contactme" className="bg-lprimary text-lbg">
       <BasicLayout
         heading="Contact Me"
         className="!mt-5 px-7 py-16"

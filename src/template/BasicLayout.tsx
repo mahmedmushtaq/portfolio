@@ -5,8 +5,9 @@ interface PropsType {
   heading: string;
   secondaryHeading: string;
   children: ReactChild | ReactChild[];
-  contentTopMargin?: 12 | 5 | 0;
+  contentTopMargin?: 12 | 20 | 5 | 0 | number;
   className?: string;
+  id?: string;
 }
 
 const BasicLayout = ({
@@ -15,9 +16,10 @@ const BasicLayout = ({
   children,
   contentTopMargin = 5,
   className = "",
+  id,
 }: PropsType) => {
   return (
-    <div className={`mt-16 ${className}`}>
+    <div id={id} className={`mt-16 ${className}`}>
       <div className="text-center">
         <H2 className="text-2xl">{heading}</H2>
         <H3 className="text-lg">{secondaryHeading}</H3>

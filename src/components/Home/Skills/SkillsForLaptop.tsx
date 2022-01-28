@@ -13,25 +13,25 @@ import mySkillsList from "./skills";
 
 const Skills = () => {
   return (
-    <Container>
-      <BasicLayout
-        heading="Skills"
-        secondaryHeading="My Technical Level"
-        contentTopMargin={12}
-      >
-        <div className="grid grid-cols-2 gap-4">
-          {mySkillsList.map((list) => (
-            <SkillList
-              key={list.id}
-              listIcon={<list.icon />}
-              list={list.list}
-              listHeading={list.heading}
-              listDescription={list.description}
-            />
-          ))}
-        </div>
-      </BasicLayout>
-    </Container>
+    <BasicLayout
+      heading="Skills"
+      secondaryHeading="My Technical Level"
+      contentTopMargin={12}
+      className="mt-28"
+      id="skills"
+    >
+      <div className="grid grid-cols-2 gap-4">
+        {mySkillsList.map((list) => (
+          <SkillList
+            key={list.id}
+            listIcon={<list.icon />}
+            list={list.list}
+            listHeading={list.heading}
+            listDescription={list.description}
+          />
+        ))}
+      </div>
+    </BasicLayout>
   );
 };
 

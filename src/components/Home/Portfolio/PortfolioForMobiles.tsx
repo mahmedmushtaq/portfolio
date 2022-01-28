@@ -1,7 +1,7 @@
 import BasicLayout from "../../../template/BasicLayout";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import { Button, Container, H3, P } from "../../UIWidgets";
+import { Button, H3, P } from "../../UIWidgets";
 import { portfolioList } from "./portfoliolist";
 import "./index.css";
 import { ArrowRight, ChevronLeft, ChevronRight } from "react-feather";
@@ -25,8 +25,6 @@ const Portfolio = () => {
       heading="Portfolio"
       secondaryHeading="My Word"
       contentTopMargin={0}
-      className="mt-28"
-      id="portfolio"
     >
       <div className="relative">
         <div className="absolute right-0 inset-y-1/2">
@@ -41,26 +39,18 @@ const Portfolio = () => {
             swipeable={false}
           >
             {portfolioList.map((item) => (
-              <div key={item.id} className="flex justify-around items-center">
-                <div>
-                  <H3 bold className="pb-3">
-                    {item.heading}
-                  </H3>
-                  <img
-                    alt="Portfolio"
-                    style={{ width: 400 }}
-                    src={item.imgSrc}
-                  />
-                </div>
-                <div className=" basis-2/4">
-                  <P className="text-left">{item.description}</P>
-                  <Button
-                    text={"Visit"}
-                    variant="outlined"
-                    icon={<ArrowRight className="ml-2" />}
-                    className="!mt-3 !py-2 px-5"
-                  />
-                </div>
+              <div key={item.id} className="">
+                <H3 bold className="pb-3">
+                  {item.heading}
+                </H3>
+                <img alt="Portfolio" width={100} src={item.imgSrc} />
+                <P className="text-left">{item.description}</P>
+                <Button
+                  text={"Visit"}
+                  variant="outlined"
+                  icon={<ArrowRight className="ml-2" />}
+                  className="!mt-3 !py-2 px-5"
+                />
               </div>
             ))}
           </Carousel>
