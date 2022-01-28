@@ -2,6 +2,8 @@ import { Facebook, GitHub, Instagram, Linkedin, Twitter } from "react-feather";
 import { H2, H3, P } from "../../UIWidgets";
 
 const Footer = () => {
+  const iconClassName = "mr-4 cursor-pointer";
+
   return (
     <div id="footer" className="text-lbg px-7 py-10 pb-20 bg-lprimary">
       <div className="flex justify-between items-start">
@@ -21,11 +23,11 @@ const Footer = () => {
           </P>
         </div>
         <div className="flex">
-          <Facebook className="mr-4" />
-          <Instagram className="mr-4" />
-          <Twitter className="mr-4" />
-          <Linkedin className="mr-4" />
-          <GitHub className="mr-4" />
+          <Facebook className={iconClassName} />
+          <Instagram className={iconClassName} />
+          <Twitter className={iconClassName} />
+          <Linkedin className={iconClassName} />
+          <GitHub className={iconClassName} />
         </div>
       </div>
       <div className="mt-12 text-center">

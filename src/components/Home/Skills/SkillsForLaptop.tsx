@@ -14,7 +14,7 @@ import mySkillsList from "./skills";
 const Skills = () => {
   return (
     <BasicLayout
-      heading="Skills"
+      heading="My Skills"
       secondaryHeading="My Technical Level"
       contentTopMargin={12}
       className="mt-28"

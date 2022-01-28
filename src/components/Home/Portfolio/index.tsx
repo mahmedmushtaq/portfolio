@@ -25,7 +25,6 @@ const Portfolio = () => {
       heading="Portfolio"
       secondaryHeading="My Word"
       contentTopMargin={0}
-      className="mt-28"
       id="portfolio"
     >
       <div className="relative">

@@ -13,7 +13,7 @@ import { Button, Container, H2, H3, P } from "../../UIWidgets";
 
 const Header = () => {
   const MyProfile = (
-    <div>
+    <div className="self-start">
       <img src={MePic} alt="My Pic" width={300} style={{ borderRadius: 200 }} />
     </div>
   );

@@ -21,8 +21,8 @@ const BasicLayout = ({
   return (
     <div id={id} className={`mt-16 ${className}`}>
       <div className="text-center">
-        <H2 className="text-2xl">{heading}</H2>
-        <H3 className="text-lg">{secondaryHeading}</H3>
+        <H2 className="!text-5xl ">{heading}</H2>
+        <H3 className="!text-lg">{secondaryHeading}</H3>
       </div>
       <div className={`mt-${contentTopMargin}`}>{children}</div>
     </div>

@@ -23,7 +23,7 @@ const Accordion = ({
     setHeight(!isOpened ? `${contentElement!.current!.scrollHeight}px` : "0px");
   };
   return (
-    <div onClick={HandleOpening}>
+    <div className="cursor-pointer" onClick={HandleOpening}>
       <div className={"flex text-white"}>
         <div className="mt-2 mr-2">{icon}</div>
         <div>
