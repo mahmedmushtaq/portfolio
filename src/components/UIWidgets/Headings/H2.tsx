@@ -2,13 +2,13 @@ import React from "react";
 
 const H2 = ({
   children,
-  className,
+  className = "",
 }: {
   children: React.ReactChild | React.ReactChild[];
   className?: string;
 }) => {
   return (
-    <h2 className={`text-3xl font-gilroyBold ${className}`}>{children}</h2>
+    <h2 className={`text-4xl font-gilroyBold ${className}`}>{children}</h2>
   );
 };
 

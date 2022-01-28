@@ -3,7 +3,11 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      transitionProperty: {
+        height: "height",
+      },
+    },
     fontFamily: {
       gilroyBold: ["gilroy-bold"],
       gilroy: ["gilroy"],

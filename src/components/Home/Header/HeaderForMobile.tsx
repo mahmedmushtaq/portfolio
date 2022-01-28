@@ -1,6 +1,6 @@
 import MePic from "../../../common/assets/me_pic.png";
 import { GitHub, Linkedin, Send } from "react-feather";
-import { Button, H2, H3 } from "../../../components/UIWidgets";
+import { Button, H2, H3, P } from "../../UIWidgets";
 
 const Header = () => {
   return (
@@ -10,6 +10,7 @@ const Header = () => {
           <GitHub className="cursor-pointer" />
           <Linkedin className="mt-5 cursor-pointer" />
         </div>
+
         <div className="mr-auto ml-auto">
           <img
             src={MePic}
@@ -22,10 +23,10 @@ const Header = () => {
       <div className="mt-7">
         <H2>Hi, I'am Ahmed</H2>
         <H3 className="mt-2">Full Stack Developer</H3>
-        <p className="mt-5 font-p">
+        <P>
           Highly expert in full stack web development by using React, React
-          native, node, TypeScript, GraphQL, Blockchain and web3
-        </p>
+          native, Next, node, TypeScript, GraphQL, Blockchain and web3
+        </P>
         <div className="mt-5">
           <Button text="Contact Me" icon={<Send className="ml-3" />} />
         </div>
