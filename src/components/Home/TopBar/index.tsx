@@ -13,6 +13,7 @@ import {
 import { H2, H3, Drawer } from "../../UIWidgets";
 import { topBarIconsList } from "./list";
 import TopBarDrawer from "./TopBarDrawer";
+import LaptopTopBar from "./TopBarForLaptop";
 
 const TopBar = () => {
   const [showDrawer, setShowDrawer] = useState(false);
@@ -23,17 +24,22 @@ const TopBar = () => {
 
   return (
     <div>
-      <TopBarDrawer
-        showDrawer={showDrawer}
-        setShowDrawer={setShowDrawer}
-        toggleDrawer={toggleDrawer}
-      />
-      <div className="fixed z-40 bottom-0 py-4 px-7 w-full left-0 flex bg-lbg">
-        <H3 className="text-lg">Ahmed</H3>
-        <div className="flex items-center ml-auto">
-          <Moon className="mr-4 cursor-pointer" />
-          <Grid className="cursor-pointer" onClick={toggleDrawer} />
+      <div className="block md:hidden">
+        <TopBarDrawer
+          showDrawer={showDrawer}
+          setShowDrawer={setShowDrawer}
+          toggleDrawer={toggleDrawer}
+        />
+        <div className="fixed z-40 bottom-0 py-4 px-7 w-full left-0 flex bg-lbg">
+          <H3 className="text-lg">Ahmed</H3>
+          <div className="flex items-center ml-auto">
+            <Moon className="mr-4 cursor-pointer" />
+            <Grid className="cursor-pointer" onClick={toggleDrawer} />
+          </div>
         </div>
+      </div>
+      <div className="hidden md:block">
+        <LaptopTopBar />
       </div>
     </div>
   );

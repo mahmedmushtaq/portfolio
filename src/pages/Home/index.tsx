@@ -1,8 +1,8 @@
 import Header from "../../components/Home/Header";
-import TopBar from "../../components/Home/TopBar/TopBar";
-import AboutMe from "../../components/Home/AboutMe/AboutMeBg";
-import Skills from "../../components/Home/Skills/SkillsForLaptop";
-import Qualtifications from "../../components/Home/Qualifications/QualificationsForLaptop";
+import TopBar from "../../components/Home/TopBar";
+import AboutMe from "../../components/Home/AboutMe";
+import Skills from "../../components/Home/Skills";
+import Qualtifications from "../../components/Home/Qualifications";
 import Services from "../../components/Home/Services";
 import Portfolio from "../../components/Home/Portfolio";
 import ContactMe from "../../components/Home/ContactMe";
@@ -20,26 +20,14 @@ const Home = () => {
           <AboutMe />
           <Skills />
           <Qualtifications />
-          {/* <Services /> */}
           <Portfolio />
           <ContactMe />
           <Testimonials />
         </Container>
-
-        {/*
-       
-       
-        */}
       </div>
       <div className="mt-28">
         <Footer />
       </div>
-
-      {/* 
-      <div className="px-7">
-     
-      </div>
-      */}
     </div>
   );
 };

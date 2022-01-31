@@ -1,47 +1,28 @@
 import React from "react";
-import styles from "./styles.module.css";
-import Step, { StepPropTypes } from "./Step";
+import { Circle } from "react-feather";
+import { H2 } from "..";
 
-interface PropTypes extends StepPropTypes {
-  isCompleted?: boolean;
-  noLabel?: boolean;
-  currentStep: number;
-  steps: { content: React.ReactChild | string }[];
-  isVertical?: boolean;
+interface PropsType {
+  children: React.ReactChild | React.ReactChild[];
+
+  circleSize?: number;
 }
 
-const Stepper = ({
-  steps,
-  currentStep,
-  noLabel = false,
-  isVertical = true,
-  ...rest
-}: PropTypes) => {
-  const defualtStep = 1;
-
+const Stepper = ({ children, circleSize = 20 }: PropsType) => {
   return (
-    <div
-      className={styles.Stepper}
-      style={{
-        transform: isVertical ? "rotate(90deg)" : undefined,
-        transformOrigin: isVertical ? "0 100%" : undefined,
-      }}
-    >
-      {steps?.map((step, i) => (
-        <Step
-          key={i}
-          showLine={i > 0}
-          color="#23b561"
-          fontSize="20px"
-          fontColor="#18aed6"
-          showVIcon={
-            currentStep === steps?.length || currentStep > i + defualtStep
-          }
-          content={noLabel ? undefined : step.content}
-          isCompleted={currentStep >= i + defualtStep}
-          {...rest}
+    <div className="flex flex-row">
+      <div className="flex flex-col">
+        <Circle className="mr-2" fill="#003060" size={circleSize} />
+
+        <div
+          className={`md:hidden h-full bg-lprimary ml-2`}
+          style={{
+            width: 2,
+          }}
         />
-      ))}
+      </div>
+
+      <div className="pb-10 -mt-2">{children}</div>
     </div>
   );
 };

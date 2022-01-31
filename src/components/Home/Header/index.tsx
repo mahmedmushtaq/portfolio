@@ -1,5 +1,5 @@
 import MePic from "../../../common/assets/me_pic.png";
-import TopBar from "../TopBar/TopBar";
+import TopBar from "../TopBar/TopBarForLaptop";
 import {
   ArrowDownCircle,
   Facebook,
@@ -10,33 +10,39 @@ import {
   Twitter,
 } from "react-feather";
 import { Button, Container, H2, H3, P } from "../../UIWidgets";
+import { content } from "./content";
 
 const Header = () => {
   const MyProfile = (
-    <div className="self-start">
-      <img src={MePic} alt="My Pic" width={300} style={{ borderRadius: 200 }} />
+    <div className="self-start  md:mt-12">
+      <img
+        src={MePic}
+        alt="My Pic"
+        className="w-52 lg:w-72"
+        style={{ borderRadius: 200 }}
+      />
     </div>
   );
 
   const iconClassNames = "mt-5 cursor-pointer hover:text-lprimary";
 
   return (
-    <div id="home" className="flex justify-between items-center my-20">
-      <div className="flex mt-16 justify-between">
-        <div>
+    <div
+      id="home"
+      className="flex flex-col md:flex-row justify-between lg:items-center my-20"
+    >
+      <div className="flex lg:mt-0 md:mt-16  justify-between">
+        <div className="mt-3 md:mt-0">
           <Twitter className={iconClassNames} size={35} />
           <GitHub className={iconClassNames} size={35} />
           <Linkedin className={iconClassNames} size={35} />
         </div>
-        {/* {MyProfile} */}
+        <div className="block md:hidden mx-auto"> {MyProfile}</div>
       </div>
-      <div className="mt-7  px-10 basis-3/6">
-        <H2>Hi, I'am Ahmed</H2>
-        <H3 className="mt-2">Full Stack Developer</H3>
-        <P>
-          Highly expert in full stack web development by using React, React
-          native, Next, node, TypeScript, GraphQL, Blockchain and web3
-        </P>
+      <div className="mt-7  md:px-10 md:basis-3/6">
+        <H2>{content.primaryHeading}</H2>
+        <H3 className="mt-2">{content.secondaryHeading}</H3>
+        <P>{content.description}</P>
         <div className="mt-5">
           <Button text="Contact Me" icon={<Send className="ml-3" />} />
         </div>
@@ -50,7 +56,7 @@ const Header = () => {
           </H3>
         </div>
       </div>
-      {MyProfile}
+      <div className="hidden md:block"> {MyProfile}</div>
     </div>
   );
 };

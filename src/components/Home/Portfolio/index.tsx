@@ -40,7 +40,10 @@ const Portfolio = () => {
             swipeable={false}
           >
             {portfolioList.map((item) => (
-              <div key={item.id} className="flex justify-around items-center">
+              <div
+                key={item.id}
+                className="md:flex justify-around items-center"
+              >
                 <div>
                   <H3 bold className="pb-3">
                     {item.heading}
@@ -51,7 +54,7 @@ const Portfolio = () => {
                     src={item.imgSrc}
                   />
                 </div>
-                <div className=" basis-2/4">
+                <div className=" basis-2/4 px-5">
                   <P className="text-left">{item.description}</P>
                   <Button
                     text={"Visit"}

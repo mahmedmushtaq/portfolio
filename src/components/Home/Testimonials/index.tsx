@@ -14,13 +14,19 @@ const Testimonials = () => {
       className="mt-28"
       id="testimonials"
     >
-      {/* <Carousel> */}
-      <div className="grid grid-cols-2">
+      <div className="hidden md:grid grid-cols-2">
         {testimonialsReview.map((item) => (
           <TestimonialItem key={item.id} {...item} />
         ))}
       </div>
-      {/* </Carousel> */}
+
+      <div className="block md:hidden">
+        <Carousel>
+          {testimonialsReview.map((item) => (
+            <TestimonialItem key={item.id} {...item} />
+          ))}
+        </Carousel>
+      </div>
     </BasicLayout>
   );
 };

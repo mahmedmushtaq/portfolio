@@ -12,7 +12,7 @@ interface PropsType {
 const SkillListItem = (props: PropsType) => {
   const { listIcon, listHeading, listDescription, list } = props;
   return (
-    <div className="my-6 mx-auto">
+    <div className="my-6 mx-auto w-full">
       <AccordionWidget
         icon={listIcon}
         heading={listHeading}
@@ -21,7 +21,7 @@ const SkillListItem = (props: PropsType) => {
         <div className="py-4">
           {list.map((skill) => (
             <div key={skill.id} className="mb-3">
-              <H3 className="text-sm">{skill.heading}</H3>
+              <H3 className="!text-sm">{skill.heading}</H3>
               <ProgressBar percentage={skill.percentage} />
             </div>
           ))}

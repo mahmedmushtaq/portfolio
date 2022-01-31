@@ -1,4 +1,5 @@
 import { X } from "react-feather";
+import ScrollIntoView from "react-scroll-into-view";
 import Drawer from "../../UIWidgets/Drawer";
 import { topBarIconsList } from "./list";
 
@@ -18,10 +19,12 @@ const TopBarDrawer = ({
       <div className="text-center">
         <div className="grid grid-cols-3 ">
           {topBarIconsList.map((item) => (
-            <div className="mb-4" key={item.id}>
-              <item.component className="mx-auto cursor-pointer hover:text-lprimary" />
-              <h3 className="text-sm font-p">{item.heading}</h3>
-            </div>
+            <ScrollIntoView selector={item.link}>
+              <div className="mb-4" key={item.id}>
+                <item.component className="mx-auto cursor-pointer hover:text-lprimary" />
+                <h3 className="text-sm font-p">{item.heading}</h3>
+              </div>
+            </ScrollIntoView>
           ))}
         </div>
 

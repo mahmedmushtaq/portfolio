@@ -12,9 +12,8 @@ const Container = ({
       style={{
         maxWidth: 1334,
         margin: "0 auto",
-        padding: "0 82px",
       }}
-      className={className}
+      className={`md:px-8 lg:px-20 ${className}`}
     >
       {children}
     </div>
