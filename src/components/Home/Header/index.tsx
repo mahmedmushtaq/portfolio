@@ -5,6 +5,7 @@ import {
   Facebook,
   GitHub,
   Linkedin,
+  Mail,
   MousePointer,
   Send,
   Twitter,
@@ -20,6 +21,11 @@ const iconList = [
     icon: Linkedin,
     href: "https://www.linkedin.com/in/m-ahmed-mushtaq/",
   },
+  // {
+  //   id: 4,
+  //   icon: Mail,
+  //   href: "mahmedmushtaq296@gmail.com",
+  // },
 ];
 
 const Header = () => {

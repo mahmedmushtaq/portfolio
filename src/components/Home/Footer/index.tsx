@@ -11,6 +11,9 @@ const Footer = () => {
           <div>
             <H3 bold>M Ahmed Mushtaq</H3>
             <P top={2}>Full Stack Developer</P>
+            <P top={2} className="mb-5">
+              mahmedmushtaq296@gmail.com
+            </P>
           </div>
           <div className="flex flex-col md:flex-row ">
             {footerList.map((item) => (

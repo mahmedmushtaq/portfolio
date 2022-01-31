@@ -24,7 +24,7 @@ const Accordion = ({
   };
   return (
     <div className="cursor-pointer" onClick={HandleOpening}>
-      <div className={"flex text-white"}>
+      <div className={"flex justify-center text-white"}>
         <div className="mt-2 mr-2">{icon}</div>
         <div>
           <H2 className="!text-lg">{heading}</H2>

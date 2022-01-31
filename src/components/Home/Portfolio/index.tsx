@@ -28,19 +28,18 @@ const Portfolio = () => {
       contentTopMargin={0}
       id="portfolio"
     >
-      <div className="relative">
-        <div className="absolute right-0 inset-y-1/2">
-          <ChevronRight
-            className="cursor-pointer z-30"
-            size={35}
-            onClick={nextItem}
-          />
+      <div className="relative mt-5 md:mt-0">
+        <div
+          className="absolute right-0  z-30 h-full flex items-center"
+          onClick={nextItem}
+        >
+          <ChevronRight className="cursor-pointer " size={35} />
         </div>
         <div className="w-11/12 mx-auto">
           <Carousel
             showIndicators={false}
-            showThumbs={false}
             showArrows={false}
+            swipeable={false}
             selectedItem={selectedItem}
           >
             {portfolioList.map((item) => (
@@ -48,12 +47,11 @@ const Portfolio = () => {
             ))}
           </Carousel>
         </div>
-        <div className="absolute left-0 inset-y-1/2">
-          <ChevronLeft
-            className="cursor-pointer z-30"
-            size={35}
-            onClick={previousItem}
-          />
+        <div
+          className="absolute top-0 left-0 w-fit inset-1/2  z-30 h-full flex items-center"
+          onClick={previousItem}
+        >
+          <ChevronLeft className="cursor-pointer" size={35} />
         </div>
       </div>
     </BasicLayout>

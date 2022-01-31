@@ -1,5 +1,5 @@
 import BasicLayout from "../../../template/BasicLayout";
-import { Button } from "../../UIWidgets";
+import { Button, H3 } from "../../UIWidgets";
 
 const ContactMe = () => {
   return (
