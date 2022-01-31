@@ -8,5 +8,5 @@ export const shortAboutMeIntro = [
 export const content = {
     primaryHeading: "About Me",
     secondaryHeading: "My Introduction",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to",
+    description: "I am a full-stack web developer with core expertise in Node, TypeScript, React, GraphQL,web3, solidity, ganache, truffle, And MongoDB. I have more than 4 years of in web development. I am very Strong in developing applications using GraphQL, React.js, React Native, Next.js, JavaScript, Typescript, SASS, HTML, Node, blockchain, And MongoDB. Able to effectively communicate complex technical information to non-technical users on all levels.",
 }

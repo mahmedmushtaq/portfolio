@@ -17,7 +17,7 @@ const Portfolio = () => {
 
   const previousItem = () => {
     let next = selectedItem - 1;
-    if (next < 0) next = 9;
+    if (next < 0) next = portfolioList.length - 1;
     setSelectedItem(next % portfolioList.length);
   };
 
@@ -30,7 +30,11 @@ const Portfolio = () => {
     >
       <div className="relative">
         <div className="absolute right-0 inset-y-1/2">
-          <ChevronRight className="cursor-pointer" onClick={nextItem} />
+          <ChevronRight
+            className="cursor-pointer z-30"
+            size={35}
+            onClick={nextItem}
+          />
         </div>
         <div className="w-11/12 mx-auto">
           <Carousel
@@ -38,7 +42,6 @@ const Portfolio = () => {
             showThumbs={false}
             showArrows={false}
             selectedItem={selectedItem}
-            swipeable={false}
           >
             {portfolioList.map((item) => (
               <PortfolioItem key={item.id} {...item} />
@@ -46,7 +49,11 @@ const Portfolio = () => {
           </Carousel>
         </div>
         <div className="absolute left-0 inset-y-1/2">
-          <ChevronLeft className="cursor-pointer" onClick={previousItem} />
+          <ChevronLeft
+            className="cursor-pointer z-30"
+            size={35}
+            onClick={previousItem}
+          />
         </div>
       </div>
     </BasicLayout>
