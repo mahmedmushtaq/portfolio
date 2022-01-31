@@ -6,6 +6,7 @@ import { portfolioList } from "./portfoliolist";
 import "./index.css";
 import { ArrowRight, ChevronLeft, ChevronRight } from "react-feather";
 import { useState } from "react";
+import PortfolioItem from "./PortfolioItem";
 
 const Portfolio = () => {
   const [selectedItem, setSelectedItem] = useState(0);
@@ -40,30 +41,7 @@ const Portfolio = () => {
             swipeable={false}
           >
             {portfolioList.map((item) => (
-              <div
-                key={item.id}
-                className="md:flex justify-around items-center"
-              >
-                <div>
-                  <H3 bold className="pb-3">
-                    {item.heading}
-                  </H3>
-                  <img
-                    alt="Portfolio"
-                    style={{ width: 400 }}
-                    src={item.imgSrc}
-                  />
-                </div>
-                <div className=" basis-2/4 px-5">
-                  <P className="text-left">{item.description}</P>
-                  <Button
-                    text={"Visit"}
-                    variant="outlined"
-                    icon={<ArrowRight className="ml-2" />}
-                    className="!mt-3 !py-2 px-5"
-                  />
-                </div>
-              </div>
+              <PortfolioItem key={item.id} {...item} />
             ))}
           </Carousel>
         </div>

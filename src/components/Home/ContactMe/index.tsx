@@ -9,7 +9,13 @@ const ContactMe = () => {
         className="!mt-5 px-7 py-16"
         secondaryHeading="Contact Me Now, So we can discuss your requirements in more details"
       >
-        <Button text="Contact Me" center />
+        <a
+          href="https://www.linkedin.com/in/m-ahmed-mushtaq/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Button text="Contact Me" center />
+        </a>
       </BasicLayout>
     </div>
   );

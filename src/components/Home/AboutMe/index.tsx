@@ -1,6 +1,7 @@
 import { DownloadCloud } from "react-feather";
 import { H2, H3, P, Button } from "../../UIWidgets";
 import { content, shortAboutMeIntro } from "./content";
+import MyCv from "../../../common/assets/mahmed_mushtaq_cv.pdf";
 
 const AboutMe = () => {
   return (
@@ -28,11 +29,13 @@ const AboutMe = () => {
           ))}
         </div>
         <div className="mt-10">
-          <Button
-            text="Download CV"
-            className="mx-auto"
-            icon={<DownloadCloud className="ml-3" />}
-          />
+          <a href={MyCv} target="_blank" rel="noreferrer">
+            <Button
+              text="Download CV"
+              className="mx-auto"
+              icon={<DownloadCloud className="ml-3" />}
+            />
+          </a>
         </div>
       </div>
     </div>

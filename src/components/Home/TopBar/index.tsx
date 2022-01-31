@@ -31,9 +31,9 @@ const TopBar = () => {
           toggleDrawer={toggleDrawer}
         />
         <div className="fixed z-40 bottom-0 py-4 px-7 w-full left-0 flex bg-lbg">
-          <H3 className="text-lg">Ahmed</H3>
+          <H3 className="text-">Ahmed</H3>
           <div className="flex items-center ml-auto">
-            <Moon className="mr-4 cursor-pointer" />
+            {/* <Moon className="mr-4 cursor-pointer" /> */}
             <Grid className="cursor-pointer" onClick={toggleDrawer} />
           </div>
         </div>

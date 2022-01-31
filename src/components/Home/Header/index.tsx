@@ -12,6 +12,16 @@ import {
 import { Button, Container, H2, H3, P } from "../../UIWidgets";
 import { content } from "./content";
 
+const iconList = [
+  { id: 1, icon: Twitter, href: "https://twitter.com/MAhmedMushtaq3" },
+  { id: 2, icon: GitHub, href: "https://github.com/mahmedmushtaq" },
+  {
+    id: 3,
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/m-ahmed-mushtaq/",
+  },
+];
+
 const Header = () => {
   const MyProfile = (
     <div className="self-start  md:mt-12">
@@ -24,8 +34,6 @@ const Header = () => {
     </div>
   );
 
-  const iconClassNames = "mt-5 cursor-pointer hover:text-lprimary";
-
   return (
     <div
       id="home"
@@ -33,9 +41,14 @@ const Header = () => {
     >
       <div className="flex lg:mt-0 md:mt-16  justify-between">
         <div className="mt-3 md:mt-0">
-          <Twitter className={iconClassNames} size={35} />
-          <GitHub className={iconClassNames} size={35} />
-          <Linkedin className={iconClassNames} size={35} />
+          {iconList.map((item) => (
+            <a href={item.href} target="_blank" rel="noreferrer" key={item.id}>
+              <item.icon
+                className={"mt-5 cursor-pointer hover:text-lprimary"}
+                size={35}
+              />
+            </a>
+          ))}
         </div>
         <div className="block md:hidden mx-auto"> {MyProfile}</div>
       </div>
@@ -44,7 +57,13 @@ const Header = () => {
         <H3 className="mt-2">{content.secondaryHeading}</H3>
         <P>{content.description}</P>
         <div className="mt-5">
-          <Button text="Contact Me" icon={<Send className="ml-3" />} />
+          <a
+            href="https://www.linkedin.com/in/m-ahmed-mushtaq/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button text="Contact Me" icon={<Send className="ml-3" />} />
+          </a>
         </div>
 
         <div>

@@ -10,21 +10,21 @@ export const footerFollowMeIcon = [
   {
     id: 1,
     icon: Facebook,
-  },
-  {
-    id: 2,
-    icon: Instagram,
+    href: "https://www.facebook.com/mahmedmushtaq12/",
   },
   {
     id: 3,
     icon: Twitter,
+    href: "https://twitter.com/MAhmedMushtaq3",
   },
   {
     id: 4,
     icon: Linkedin,
+    href: "https://www.linkedin.com/in/m-ahmed-mushtaq/",
   },
   {
     id: 5,
     icon: GitHub,
+    href: "https://github.com/mahmedmushtaq",
   },
 ];

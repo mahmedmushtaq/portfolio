@@ -20,7 +20,7 @@ const TopBar = () => {
             </H3>
           </ScrollIntoView>
         ))}
-        <Moon className="mx-4 cursor-pointer" />
+        {/* <Moon className="mx-4 cursor-pointer" /> */}
       </div>
     </div>
   );

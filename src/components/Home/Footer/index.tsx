@@ -23,7 +23,14 @@ const Footer = () => {
           </div>
           <div className="flex mt-12 md:mt-0">
             {footerFollowMeIcon.map((item) => (
-              <item.icon key={item.id} className="mr-4 cursor-pointer" />
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                key={item.id}
+              >
+                <item.icon key={item.id} className="mr-4 cursor-pointer" />
+              </a>
             ))}
           </div>
         </div>
