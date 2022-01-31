@@ -19,7 +19,7 @@ const TopBarDrawer = ({
       <div className="text-center">
         <div className="grid grid-cols-3 ">
           {topBarIconsList.map((item) => (
-            <ScrollIntoView selector={item.link}>
+            <ScrollIntoView key={item.id} selector={item.link}>
               <div className="mb-4" key={item.id}>
                 <item.component className="mx-auto cursor-pointer hover:text-lprimary" />
                 <h3 className="text-sm font-p">{item.heading}</h3>
