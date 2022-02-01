@@ -8,6 +8,7 @@ ReactGA.initialize(process.env.REACT_APP_GA_ID!);
 
 function AllRoutes() {
   useEffect(() => {
+    console.log(process.env.REACT_APP_GA_ID);
     ReactGA.send("Portfolio home page");
   }, []);
   return (
