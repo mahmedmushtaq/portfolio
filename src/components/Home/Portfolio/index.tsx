@@ -1,9 +1,9 @@
 import BasicLayout from "../../../template/BasicLayout";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { Button, Container, H3, P } from "../../UIWidgets";
 import { portfolioList } from "./portfoliolist";
-import "./index.css";
+// import "./index.css";
 import { ArrowRight, ChevronLeft, ChevronRight } from "react-feather";
 import { useState } from "react";
 import PortfolioItem from "./PortfolioItem";

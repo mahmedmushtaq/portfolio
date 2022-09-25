@@ -1,4 +1,3 @@
-import MePic from "../../../common/assets/me_pic.png";
 import TopBar from "../TopBar/TopBarForLaptop";
 import {
   ArrowDownCircle,
@@ -32,7 +31,7 @@ const Header = () => {
   const MyProfile = (
     <div className="self-start  md:mt-12">
       <img
-        src={MePic}
+        src={"/assets/me_pic.png"}
         alt="My Pic"
         className="w-52 lg:w-72"
         style={{ borderRadius: 200 }}
