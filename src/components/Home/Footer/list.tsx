@@ -1,9 +1,9 @@
 import { Facebook, GitHub, Instagram, Linkedin, Twitter } from "react-feather";
 
-export const footerList = [
-  { id: 1, heading: "About Me", link: "#info" },
-  { id: 2, heading: "Portfolio", link: "#portfolio" },
-  { id: 3, heading: "Contact Me", link: "#contactme" },
+export const footerList = (t: any) => [
+  { id: 1, heading: t("common:about_me"), link: "#info" },
+  { id: 2, heading: t("common:portfolio"), link: "#portfolio" },
+  { id: 3, heading: t("common:contact_me"), link: "#contactme" },
 ];
 
 export const footerFollowMeIcon = [

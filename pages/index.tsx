@@ -9,8 +9,9 @@ import ContactMe from "../src/components/Home/ContactMe";
 import Testimonials from "../src/components/Home/Testimonials";
 import Footer from "../src/components/Home/Footer";
 import { Container } from "../src/components/UIWidgets";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-const Home = () => {
+const Home = ({ locale }: any) => {
   return (
     <div className="bg-lbg">
       <div className="px-7 bg-lbg">
@@ -31,5 +32,11 @@ const Home = () => {
     </div>
   );
 };
+
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: { ...(await serverSideTranslations(locale, ["home", "common"])) },
+  };
+}
 
 export default Home;

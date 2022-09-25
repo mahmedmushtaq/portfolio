@@ -1,27 +1,21 @@
-import { useState } from "react";
-import { ChevronDown, ChevronUp, Code } from "react-feather";
 import BasicLayout from "../../../template/BasicLayout";
-import {
-  H2,
-  H3,
-  AccordionWidget,
-  ProgressBar,
-  Container,
-} from "../../UIWidgets";
+import { useTranslation } from "next-i18next";
+
 import SkillList from "./SkillListItem";
 import mySkillsList from "./skills";
 
 const Skills = () => {
+  const { t } = useTranslation();
   return (
     <BasicLayout
-      heading="My Skills"
-      secondaryHeading="My Technical Level"
+      heading={t("home:my_skills")}
+      secondaryHeading={t("home:my_technical_level")}
       contentTopMargin={12}
       className="mt-28"
       id="skills"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4">
-        {mySkillsList.map((list) => (
+        {mySkillsList(t).map((list) => (
           <SkillList
             key={list.id}
             listIcon={<list.icon />}

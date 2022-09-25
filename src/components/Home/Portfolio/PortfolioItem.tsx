@@ -7,10 +7,11 @@ interface PropsType {
   imgSrc: string;
   description: string;
   link: string;
+  btnText: string;
 }
 
 const PortfolioItem = (props: PropsType) => {
-  const { heading, imgSrc, description, link } = props;
+  const { heading, imgSrc, description, link, btnText } = props;
 
   return (
     <div className="md:flex justify-around items-center">
@@ -24,7 +25,7 @@ const PortfolioItem = (props: PropsType) => {
         <P className="text-left">{description}</P>
         <a href={link} target="_blank" rel="noreferrer">
           <Button
-            text={"Visit"}
+            text={btnText}
             variant="outlined"
             icon={<ArrowRight className="ml-2" />}
             className="!mt-3 !py-2 px-5"

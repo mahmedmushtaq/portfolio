@@ -1,16 +1,12 @@
-import TopBar from "../TopBar/TopBarForLaptop";
+import { useTranslation } from "next-i18next";
 import {
   ArrowDownCircle,
-  Facebook,
   GitHub,
   Linkedin,
-  Mail,
-  MousePointer,
   Send,
   Twitter,
 } from "react-feather";
-import { Button, Container, H2, H3, P } from "../../UIWidgets";
-import { content } from "./content";
+import { Button, H2, H3, P } from "../../UIWidgets";
 
 const iconList = [
   { id: 1, icon: Twitter, href: "https://twitter.com/MAhmedMushtaq3" },
@@ -20,14 +16,11 @@ const iconList = [
     icon: Linkedin,
     href: "https://www.linkedin.com/in/m-ahmed-mushtaq/",
   },
-  // {
-  //   id: 4,
-  //   icon: Mail,
-  //   href: "mahmedmushtaq296@gmail.com",
-  // },
 ];
 
 const Header = () => {
+  const { t } = useTranslation();
+
   const MyProfile = (
     <div className="self-start  md:mt-12">
       <img
@@ -58,16 +51,19 @@ const Header = () => {
         <div className="block md:hidden mx-auto"> {MyProfile}</div>
       </div>
       <div className="mt-7  md:px-10 md:basis-3/6">
-        <H2>{content.primaryHeading}</H2>
-        <H3 className="mt-2">{content.secondaryHeading}</H3>
-        <P>{content.description}</P>
+        <H2>{t("home:hi_iam_ahmed")}</H2>
+        <H3 className="mt-2">{t("home:full_stack_developer")}</H3>
+        <P>{t("home:about_me_description")}</P>
         <div className="mt-5">
           <a
             href="https://www.linkedin.com/in/m-ahmed-mushtaq/"
             target="_blank"
             rel="noreferrer"
           >
-            <Button text="Contact Me" icon={<Send className="ml-3" />} />
+            <Button
+              text={t("common:contact_me")}
+              icon={<Send className="ml-3" />}
+            />
           </a>
         </div>
 
@@ -76,7 +72,7 @@ const Header = () => {
             bold
             className="!text-lg mt-16 text-lprimary flex items-center hover:text-lsecondary cursor-pointer"
           >
-            Scroll Down <ArrowDownCircle className="ml-2" />
+            {t("home:scroll_down")} <ArrowDownCircle className="ml-2" />
           </H3>
         </div>
       </div>

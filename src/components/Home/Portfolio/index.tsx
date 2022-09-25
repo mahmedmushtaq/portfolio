@@ -1,30 +1,31 @@
 import BasicLayout from "../../../template/BasicLayout";
-// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import { Button, Container, H3, P } from "../../UIWidgets";
 import { portfolioList } from "./portfoliolist";
-// import "./index.css";
-import { ArrowRight, ChevronLeft, ChevronRight } from "react-feather";
+import { ChevronLeft, ChevronRight } from "react-feather";
 import { useState } from "react";
 import PortfolioItem from "./PortfolioItem";
+import { useTranslation } from "next-i18next";
 
 const Portfolio = () => {
   const [selectedItem, setSelectedItem] = useState(0);
+  const { t } = useTranslation();
+  const list = portfolioList(t);
+
   const nextItem = () => {
     const next = selectedItem + 1;
-    setSelectedItem(next % portfolioList.length);
+    setSelectedItem(next % list.length);
   };
 
   const previousItem = () => {
     let next = selectedItem - 1;
-    if (next < 0) next = portfolioList.length - 1;
-    setSelectedItem(next % portfolioList.length);
+    if (next < 0) next = list.length - 1;
+    setSelectedItem(next % list.length);
   };
 
   return (
     <BasicLayout
-      heading="Portfolio"
-      secondaryHeading="My Word"
+      heading={t("common:portfolio")}
+      secondaryHeading={t("home:my_word")}
       contentTopMargin={0}
       id="portfolio"
     >
@@ -42,8 +43,12 @@ const Portfolio = () => {
             swipeable={false}
             selectedItem={selectedItem}
           >
-            {portfolioList.map((item) => (
-              <PortfolioItem key={item.id} {...item} />
+            {list.map((item) => (
+              <PortfolioItem
+                btnText={t("home:visit")}
+                key={item.id}
+                {...item}
+              />
             ))}
           </Carousel>
         </div>

@@ -1,11 +1,11 @@
 import { Code, Database, FileText, Box } from "react-feather";
 
-const mySkillsList = [
+const mySkillsList = (t: any) => [
   {
     id: 1,
     icon: Code,
     heading: "Frontend Development",
-    description: "More Than 4 years of experience",
+    description: t("home:more_than_years_of_experience").replace("{{0}}", "4"),
     list: [
       { id: 1, heading: "HTML, CSS, JAVASCRIPT", percentage: 97 },
       { id: 2, heading: "Typescript, webpack, babel", percentage: 85 },
@@ -22,7 +22,7 @@ const mySkillsList = [
     id: 2,
     icon: FileText,
     heading: "Backend Development",
-    description: "More Than 4 years of experience",
+    description: t("home:more_than_years_of_experience").replace("{{0}}", "4"),
     list: [
       { id: 1, heading: "Node, Express", percentage: 97 },
       { id: 2, heading: "AWS, GCP", percentage: 85 },
@@ -36,7 +36,7 @@ const mySkillsList = [
     id: 3,
     icon: Database,
     heading: "Databases",
-    description: "More Than 4 years of experience",
+    description: t("home:more_than_years_of_experience").replace("{{0}}", "4"),
     list: [
       { id: 1, heading: "MongoDB", percentage: 97 },
       { id: 2, heading: "MySql", percentage: 95 },
@@ -47,7 +47,7 @@ const mySkillsList = [
     id: 4,
     icon: Box,
     heading: "Blockchain",
-    description: "More Than 2 years of experience",
+    description: t("home:more_than_years_of_experience").replace("{{0}}", "2"),
     list: [
       { id: 1, heading: "Solidity", percentage: 97 },
       { id: 2, heading: "Ganache", percentage: 95 },
