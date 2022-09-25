@@ -10,6 +10,7 @@
 
 # production
 /build
+/.next
 
 # misc
 .DS_Store
@@ -21,3 +22,20 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.DS_store
+demo
+node_modules
+reports
+src/.next
+.env.local
+*.swp
+out
+out-dev
+out-prod
+.next
+sitemap-index.xml
+tools/content
+tools/cache
+.vscode
+sitemap-0.xml
