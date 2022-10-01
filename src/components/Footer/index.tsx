@@ -1,12 +1,13 @@
 import { Facebook, GitHub, Instagram, Linkedin, Twitter } from "react-feather";
 import ScrollIntoView from "react-scroll-into-view";
-import { Container, H2, H3, P } from "../../UIWidgets";
+import { Container, H2, H3, LinkWrapper, P } from "../UIWidgets";
 import { footerFollowMeIcon, footerList } from "./list";
 import { useTranslation } from "next-i18next";
 
-const Footer = () => {
+const Footer = ({ redirectToHome }: { redirectToHome?: boolean }) => {
   const { t } = useTranslation();
   const list = footerList(t);
+  const Link = redirectToHome ? LinkWrapper : ScrollIntoView;
   return (
     <div id="footer" className="text-lbg px-7 py-10 pb-20 bg-lprimary">
       <Container>
@@ -20,11 +21,16 @@ const Footer = () => {
           </div>
           <div className="flex flex-col md:flex-row ">
             {list.map((item) => (
-              <ScrollIntoView key={item.id} selector={item.link}>
+              <Link
+                key={item.id}
+                {...(!redirectToHome
+                  ? { selector: item.link }
+                  : ({ link: "/", noHoverEffect: true } as any))}
+              >
                 <P top={2} className="mr-4 cursor-pointer">
                   {item.heading}
                 </P>
-              </ScrollIntoView>
+              </Link>
             ))}
           </div>
           <div className="flex mt-12 md:mt-0">

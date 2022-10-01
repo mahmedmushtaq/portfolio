@@ -3,34 +3,40 @@ import { Briefcase, Coffee, Home, Info, Image, Send } from "react-feather";
 export const topBarIconsList = (t: any) => [
   {
     id: 1,
-    component: Home,
+    Icon: Home,
     heading: t("common:home"),
-    link: "#home",
+    pageLink: "#home",
   },
 
   {
     id: 2,
-    component: Info,
+    Icon: Info,
     heading: t("common:info"),
-    link: "#info",
+    pageLink: "#info",
   },
 
   {
     id: 3,
-    component: Briefcase,
+    Icon: Briefcase,
     heading: t("common:skills"),
-    link: "#skills",
+    pageLink: "#skills",
   },
   {
     id: 5,
-    component: Image,
+    Icon: Image,
     heading: t("common:portfolio"),
-    link: "#portfolio",
+    pageLink: "#portfolio",
   },
   {
     id: 6,
-    component: Send,
+    Icon: Send,
     heading: t("common:contact_me"),
-    link: "#contactme",
+    pageLink: "#contactme",
+  },
+  {
+    id: 6,
+    Icon: Send,
+    heading: t("common:blogs"),
+    redirectLink: "/blogs",
   },
 ];

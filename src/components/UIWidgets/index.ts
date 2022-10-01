@@ -10,3 +10,5 @@ export { default as Container } from "./Container";
 export { default as Card } from "./Card";
 export { default as Hidden } from "./Hidden";
 export { default as Stepper } from "./Stepper";
+export { default as LinkWrapper } from "./LinkWrapper";
+export { default as Input } from "./Input";

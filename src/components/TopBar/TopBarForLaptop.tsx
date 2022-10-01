@@ -1,12 +1,13 @@
-import { Moon } from "react-feather";
-import { H2, H3 } from "../../UIWidgets";
+import { H2, H3, LinkWrapper } from "../UIWidgets";
 import { topBarIconsList } from "./list";
 import ScrollIntoView from "react-scroll-into-view";
 import { useTranslation } from "next-i18next";
+import TopBarItemWrapper from "./TopBarItemWrapper";
 
-const TopBar = () => {
+const TopBar = ({ redirectToHome = false }: { redirectToHome?: boolean }) => {
   const { t } = useTranslation();
   const list = topBarIconsList(t);
+
   return (
     <div className="flex mt-5 mb-16">
       <div>
@@ -14,16 +15,13 @@ const TopBar = () => {
       </div>
       <div className="ml-auto flex">
         {list.map((item) => (
-          <ScrollIntoView selector={item.link} key={item.id}>
-            <H3
-              className="!text-lg mx-3 cursor-pointer hover:text-lprimary"
-              bold
-            >
-              {item.heading}
-            </H3>
-          </ScrollIntoView>
+          <TopBarItemWrapper
+            {...item}
+            key={item.id}
+            redirectToHome={redirectToHome}
+            isComputerScreen
+          />
         ))}
-        {/* <Moon className="mx-4 cursor-pointer" /> */}
       </div>
     </div>
   );
