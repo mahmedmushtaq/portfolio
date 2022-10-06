@@ -1,6 +1,8 @@
 import { DownloadCloud } from "react-feather";
 import { H2, H3, P, Button } from "../../UIWidgets";
 import { useTranslation } from "next-i18next";
+import { useEffect, useState } from "react";
+import { getPortfolio } from "../../../common/lib/firebase/database";
 
 const shortAboutMeIntro = [
   { id: 1, headingCount: "04+" },
@@ -10,6 +12,20 @@ const shortAboutMeIntro = [
 
 const AboutMe = () => {
   const { t } = useTranslation();
+  const [cvAddress, setCvAddress] = useState();
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await getPortfolio();
+        //@ts-ignore
+        setCvAddress(res[0].cv_address);
+      } catch (err) {
+        console.log("err is ", err);
+      }
+    })();
+  }, []);
+
   return (
     <div id="info" className="bg-lprimary px-4 py-12 md:p-12 text-lbg mt-40">
       <div className="text-center">
@@ -33,13 +49,7 @@ const AboutMe = () => {
           ))}
         </div>
         <div className="mt-10">
-          <a
-            href={
-              "https://drive.google.com/file/d/1ccNTxsN9rAMnFRQRlWbr-90P077JvyFG/view?usp=sharing"
-            }
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={cvAddress} target="_blank" rel="noreferrer">
             <Button
               text={t("home:download_cv")}
               className="mx-auto"
