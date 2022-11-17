@@ -5,7 +5,7 @@ export const qualificationsList = (t: any) => [
   {
     id: "smodin-io",
     heading: "Full Stack developer at Smodin.io",
-    date: "Feb 2022 - Present",
+    date: "Feb 2022 - September",
     technologiesList: `${t(
       "home:technologies_which_i_am_using"
     )} - Next, GCP, Firebase, MUI`,
