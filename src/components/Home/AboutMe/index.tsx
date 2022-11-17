@@ -4,15 +4,26 @@ import { useTranslation } from "next-i18next";
 import { useEffect, useState } from "react";
 import { getPortfolio } from "../../../common/lib/firebase/database";
 
-const shortAboutMeIntro = [
-  { id: 1, headingCount: "04+" },
-  { id: 2, headingCount: "20+" },
-  { id: 3, headingCount: "05+" },
-];
-
 const AboutMe = () => {
   const { t } = useTranslation();
   const [cvAddress, setCvAddress] = useState();
+
+  const shortAboutMeIntro = [
+    {
+      id: 1,
+      headingCount: "04+",
+      description: t("home:more_than_years_of_experience").replace(
+        "{{0}}",
+        "04"
+      ),
+    },
+    {
+      id: 2,
+      headingCount: "20+",
+      description: t("home:completed_projects"),
+    },
+    { id: 3, headingCount: "05+", description: t("home:companies_worked") },
+  ];
 
   useEffect(() => {
     (async () => {
@@ -44,7 +55,7 @@ const AboutMe = () => {
               <H2 className="!text-2xl lg:!text-4xl mr-4">
                 {item.headingCount}
               </H2>
-              <P className="!mt-0 text-sm">{t("home:years_experience")}</P>
+              <P className="!mt-0 text-sm">{item.description!}</P>
             </div>
           ))}
         </div>
