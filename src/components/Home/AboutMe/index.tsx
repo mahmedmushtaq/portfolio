@@ -38,7 +38,7 @@ const AboutMe = () => {
   }, []);
 
   return (
-    <div id="info" className="bg-lprimary px-4 py-12 md:p-12 text-lbg mt-40">
+    <div id="info" className="bg-lprimary px-4 py-12 md:p-12 text-lbg mt-30">
       <div className="text-center">
         <H2 className="md:!text-5xl mb-2">{t("home:about_me")}</H2>
         <H3 className="!text-lg">{t("home:my_introduction")}</H3>
@@ -52,10 +52,12 @@ const AboutMe = () => {
               key={item.id}
               className="flex md:flex-row flex-col items-center"
             >
-              <H2 className="!text-2xl lg:!text-4xl mr-4">
+              <H2 className="!text-2xl lg:!text-4xl md:mr-4">
                 {item.headingCount}
               </H2>
-              <P className="!mt-0 text-sm">{item.description!}</P>
+              <P className="!mt-0 text-sm  !text-center ">
+                {item.description!}
+              </P>
             </div>
           ))}
         </div>

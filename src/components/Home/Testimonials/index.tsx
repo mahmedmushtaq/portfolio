@@ -8,6 +8,7 @@ import { useTranslation } from "next-i18next";
 
 const Testimonials = () => {
   const { t } = useTranslation();
+  const list = testimonialsReview(t);
   return (
     <BasicLayout
       heading={t("home:testimonials")}
@@ -16,18 +17,10 @@ const Testimonials = () => {
       className="mt-28"
       id="testimonials"
     >
-      <div className="hidden md:grid grid-cols-2">
-        {testimonialsReview(t).map((item) => (
-          <TestimonialItem key={item.id} {...item} />
+      <div className="block grid md:grid-cols-2    align-center ">
+        {list.map((item, index) => (
+          <TestimonialItem key={item.id} className="my-5 md:my-0" {...item} />
         ))}
-      </div>
-
-      <div className="block md:hidden">
-        <Carousel>
-          {testimonialsReview(t).map((item) => (
-            <TestimonialItem key={item.id} {...item} />
-          ))}
-        </Carousel>
       </div>
     </BasicLayout>
   );

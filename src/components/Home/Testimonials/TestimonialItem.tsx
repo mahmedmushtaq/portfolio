@@ -5,22 +5,24 @@ interface PropsType {
   clientName: string;
   companyName: string;
   review: string;
+  className?: string;
 }
 
 const TestimonialItem = ({
   imgSrc,
   clientName,
-  companyName,
+  companyName = "",
+  className,
   review,
 }: PropsType) => {
   return (
-    <div className="text-left">
+    <div className={`text-left  ${className}`}>
       <div className="flex">
         <div>
           <img
             alt="My Client"
             src={imgSrc}
-            style={{ borderRadius: 50, width: 100 }}
+            style={{ borderRadius: 50, minWidth: 50, maxWidth: 50 }}
           />
         </div>
         <div className="ml-2">
